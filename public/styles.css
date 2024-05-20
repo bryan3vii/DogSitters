@@ -1,0 +1,271 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #5372ce;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hero {
+    background: url('images/IMG_2254.JPG') no-repeat center center/cover;
+    color: #183867;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background: #5372ce;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 1.1em;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.service h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1.2rem;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    display: block;
+    background: #5372ce;
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1.1em;
+}
+
+.contact button:hover {
+    background: #555;
+}
+
+footer {
+    background: #183867;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Styling for adCreation.html */
+.ad-form {
+    padding: 50px 0;
+}
+
+.ad-form form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ad-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ad-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.ad-form input[type="date"],
+.ad-form input[type="number"],
+.ad-form input[type="text"],
+.ad-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.ad-form button {
+    display: block;
+    background: #5372ce;
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1.1em;
+}
+
+.ad-form button:hover {
+    background: #555;
+}
+
+
+#side-panel {
+    flex: 0 0 25%; /* Fixed width side panel */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  #side-panel form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #side-panel form label {
+    margin-bottom: 10px;
+  }
+
+  #side-panel form input[type="text"],
+  #side-panel form input[type="submit"] {
+    margin-bottom: 10px;
+  }
+
+  #Job-Listings-available {
+    margin-top: -100vb;
+    margin-left: 4vb;
+  }
+
+  #login {
+    margin-top: 10vh;
+    margin-left: 10vw;
+    color: #000000;
+    align-items: center;
+  }
+
+
+  /* Styling for login.html */
+.login-form {
+    padding: 50px 0;
+}
+
+.login-form form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button {
+    display: block;
+    background: #5372ce;
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1.1em;
+}
+
+.login-form button:hover {
+    background: #555;
+}

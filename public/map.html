@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map/Find A Job</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function redirectToFindJob() {
+            // Get the location value from the form
+            const location = document.getElementById("location").value;
+            // Redirect the user to the find-job.html page with the location query parameter
+            window.location.href = "./find-job.html?location=" + encodeURIComponent(location);
+        }
+    </script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            float: flex;
+            margin-left: 20vb;
+            height: 100%;
+            width: 80%;
+            border: 2px solid #5372ce;
+            border-radius: 10px;
+            box-shadow: 0 0 400px rgba(0, 0, 0, 0.1);
+        }
+
+        #pano {
+            float: flex;
+            margin-left: 20vb;
+            height: 100%;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Pet Sitting</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./map.html">Search Jobs</a></li>
+                <li><a href="./adCreation.html">Create Ad</a></li>
+                <li><a href="./login">Log In/Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="side-panel">
+    <h1>Find A Job</h1>
+    <form id="findJobForm" onsubmit="event.preventDefault(); redirectToFindJob();">
+        <label>Location:</label>
+        <input type="text" id="location" name="location" required />
+        <input type="submit" value="Find Job" />
+    </form>
+</div>
+<script>
+    function initialize() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 42.345573, lng: -71.098326 },
+            zoom: 18,
+        });
+
+        // Get user's current location
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    const userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    map.setCenter(userLocation); // Center the map to user's location
+                    updateLocationInfo(userLocation);
+                },
+                error => {
+                    console.error("Error getting user location:", error);
+                }
+            );
+        } else {
+            console.error("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function updateLocationInfo(location) {
+        document.getElementById("location-info").innerText =
+            "Latitude: " + location.lat + ", Longitude: " + location.lng;
+    }
+
+    window.initialize = initialize;
+</script>
+<div id="map"></div>
+<div id="pano"></div>
+<!-- <div id="location-info"></div> Display user's location here -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=<GOOGLE KEY>&callback=initialize&v=weekly&solution_channel=GMP_CCS_streetview_v1"
+        defer
+></script>
+<!-- IF ABLE TO FEED FROM adCreation!!!!-->
+        <div class="service">
+            <h3>Pet Sitting</h3>
+            <p>In-home pet sitting services to ensure your pets are comfortable in their own environment.</p>
+            <button class="btn apply-btn">Apply</button>
+        </div>
+        <div class="service">
+            <h3>Feeding and Medication</h3>
+            <p>Proper feeding and medication administration according to your pet's needs.</p>
+            <button class="btn apply-btn">Apply</button>
+        </div>
+        <div class="service">
+            <h3>Overnight Care</h3>
+            <p>Extended overnight care for your pets.</p>
+            <button class="btn apply-btn">Apply</button>
+        </div>
+        <div class="service">
+            <h3>Pet Transportation</h3>
+            <p>Transportation services for your pets to vet appointments or other locations.</p>
+            <button class="btn apply-btn">Apply</button>
+        </div>
+        <div class="service">
+            <h3>Pet Grooming</h3>
+            <p>Professional grooming services to keep your pets clean and healthy.</p>
+            <button class="btn apply-btn">Apply</button>
+        </div>
+        <div class="service">
+            <h3>Playtime and Exercise</h3>
+            <p>Engaging playtime and exercise sessions tailored to your pet's needs.</p>
+            <button class="btn apply-btn">Apply</button>
+        </div>
+    </div>
+</section>
+    <section id="job-ad">
+        <div class="container">
+            <h2>Job Ad</h2>
+            <div>
+<!--     Based off what the index.js info was for handling ad creation   -->
+                <h3>{{ ad.title }}</h3>
+                <p>{{ad.dates }}</p>
+                <p>{{ad.overnightStay }}</p>
+                <p>{{ad.numberOfVisitsPerDay }}</p>
+                <p>{{ad.numberOfAnimals }}</p>
+                <p>{{ad.additionalTasks }}</p>
+                <p>{{ad.houseRules }}</p>
+                <p>{{ad.location }}</p>
+                <p>{{ad.status }}</p>       
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Pet Sitting Services</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <h1>Pet Sitting</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./map.html">Search Jobs</a></li>
+                <li><a href="./adCreation.html">Create Ad</a></li>
+                <li><a href="./login">Log In/Register</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+  
+  <% if(user == undefined) { %>
+    <h2>Not Logged In</h2>
+    <form id="loginForm">
+      <input type="text" id="username" name="username" placeholder="Username" required><br>
+      <input type="password" id="password" name="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/register">Register</a></p>
+    <a href="/auth/google"><img src="./images/googleButton.png"></a>
+  <% } else { %>
+    <% if (user.googleProfile && user.googleProfile.displayName) { %>
+      <h2>Logged in as Google User: <%= user.googleProfile.displayName %></h2>
+    <% } else if (user.username) { %>
+      <h2>Logged in as <%= user.username %></h2>
+    <% } %>
+    <a href="/logout">Logout</a>
+  <% } %>
+
+ 

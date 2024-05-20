@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mongodb": "^6.6.0",
+    "mongoose-findorcreate": "^4.0.0",
+    "mongoose-unique-validator": "^5.0.0",
+    "node": "^18.20.2",
+    "node.js": "^0.0.1-security",
+    "passport": "^0.7.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "session-file-store": "^1.5.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "dogsitters",
+  "description": "Dog Sitters group for CS 382.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

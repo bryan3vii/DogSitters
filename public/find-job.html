@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Sitting Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pet Sitting</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./map.html">Search Jobs</a></li>
+                    <li><a href="./adCreation.html">Create Ad</a></li>
+                    <li><a href="/login">Log In/Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="services">
+        <div class="container">
+            <h2>Our Available Jobs</h2>
+            <div class="service">
+                <h3>Dog Walking</h3>
+                <p>Regular walks to keep your dog active and healthy.</p>
+                <button class="btn apply-btn">Apply</button>
+            </div>
+            <div class="service">
+                <h3>Pet Sitting</h3>
+                <p>In-home pet sitting services to ensure your pets are comfortable in their own environment.</p>
+                <button class="btn apply-btn">Apply</button>
+            </div>
+            <div class="service">
+                <h3>Feeding and Medication</h3>
+                <p>Proper feeding and medication administration according to your pet's needs.</p>
+                <button class="btn apply-btn">Apply</button>
+            </div>
+            <div class="service">
+                <h3>Overnight Care</h3>
+                <p>Extended overnight care for your pets.</p>
+                <button class="btn apply-btn">Apply</button>
+            </div>
+            <div class="service">
+                <h3>Pet Transportation</h3>
+                <p>Transportation services for your pets to vet appointments or other locations.</p>
+                <button class="btn apply-btn">Apply</button>
+            </div>
+            <div class="service">
+                <h3>Pet Grooming</h3>
+                <p>Professional grooming services to keep your pets clean and healthy.</p>
+                <button class="btn apply-btn">Apply</button>
+            </div>
+            <div class="service">
+                <h3>Playtime and Exercise</h3>
+                <p>Engaging playtime and exercise sessions tailored to your pet's needs.</p>
+                <button class="btn apply-btn">Apply</button>
+            </div>
+        </div>
+    </section>
+        <section id="job-ad">
+            <div class="container">
+                <h2>Job Ad</h2>
+                <div>
+<!--     Based off what the index.js info was for handling ad creation   -->
+                    <h3>{{ ad.title }}</h3>
+                    <p>{{ad.dates }}</p>
+                    <p>{{ad.overnightStay }}</p>
+                    <p>{{ad.numberOfVisitsPerDay }}</p>
+                    <p>{{ad.numberOfAnimals }}</p>
+                    <p>{{ad.additionalTasks }}</p>
+                    <p>{{ad.houseRules }}</p>
+                    <p>{{ad.location }}</p>
+                    <p>{{ad.status }}</p>       
+                </div>
+            </div>
+        </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pet Sitting Services. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
